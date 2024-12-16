@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lung Cancer Prediction</h1>
+        <form action="/" method="POST">
+            <label for="gender">Gender (M/F):</label>
+            <input type="text" id="gender" name="gender" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="smoking">Do you smoke? (Y/N):</label>
+            <input type="text" id="smoking" name="smoking" required>
+
+            <label for="yellow_fingers">Do you have yellow fingers? (Y/N):</label>
+            <input type="text" id="yellow_fingers" name="yellow_fingers" required>
+
+            <label for="anxiety">Do you have anxiety? (Y/N):</label>
+            <input type="text" id="anxiety" name="anxiety" required>
+
+            <label for="peer_pressure">Do you have peer pressure? (Y/N):</label>
+            <input type="text" id="peer_pressure" name="peer_pressure" required>
+
+            <label for="chronic_disease">Do you have chronic disease? (Y/N):</label>
+            <input type="text" id="chronic_disease" name="chronic_disease" required>
+
+            <label for="fatigue">Do you feel fatigue? (Y/N):</label>
+            <input type="text" id="fatigue" name="fatigue" required>
+
+            <label for="allergy">Do you have allergies? (Y/N):</label>
+            <input type="text" id="allergy" name="allergy" required>
+
+            <label for="wheezing">Do you have wheezing? (Y/N):</label>
+            <input type="text" id="wheezing" name="wheezing" required>
+
+            <label for="alcohol">Do you consume alcohol? (Y/N):</label>
+            <input type="text" id="alcohol" name="alcohol" required>
+
+            <label for="coughing">Do you have coughing? (Y/N):</label>
+            <input type="text" id="coughing" name="coughing" required>
+
+            <label for="shortness_of_breath">Do you experience shortness of breath? (Y/N):</label>
+            <input type="text" id="shortness_of_breath" name="shortness_of_breath" required>
+
+            <label for="swallowing_difficulty">Do you have swallowing difficulty? (Y/N):</label>
+            <input type="text" id="swallowing_difficulty" name="swallowing_difficulty" required>
+
+            <label for="chest_pain">Do you have chest pain? (Y/N):</label>
+            <input type="text" id="chest_pain" name="chest_pain" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        
+
+        {% if result %}
+            <h2>{{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
